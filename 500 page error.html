@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500 Internal Server Error</title>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.error-container {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.error-code {
+  font-size: 6em;
+  color: #e74c3c; /*Error Red*/
+  margin-bottom: 20px;
+  animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+
+
+.error-message {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #3498db; /*Blue*/
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+</style>
+</head>
+<body>
+<div class="error-container">
+  <div class="error-code">500</div>
+  <div class="error-message">Internal Server Error</div>
+  <p>Oops! Something went wrong on our end.  We're working to fix the issue.</p>
+  <button class="button" onclick="location.reload();">Try Again</button>  <!--  Reloads the page -->
+  <p>If the problem persists, please contact support.</p>
+</div>
+</body>
+</html>
